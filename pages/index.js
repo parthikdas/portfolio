@@ -2,14 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { AnimatePresence, useInView } from 'framer-motion';
-
-import { FaJava, FaNodeJs, FaAws, FaDocker, FaGithub, FaLinkedin, FaEnvelope, FaJenkins } from "react-icons/fa";
-import { FaGears } from "react-icons/fa6";
-import { GiFiles } from "react-icons/gi";
-import { SiSpringboot, SiApachekafka, SiKubernetes } from "react-icons/si";
 import Image from 'next/image'
 
-
+import SkillsSection from "@/components/skills";
+import Contacts from "@/components/contact";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -18,20 +14,6 @@ export default function Home() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
   const text = "Parthik Kumar Das";
-
-  const skills = [
-    { name: "Java", icon: <FaJava size={24} /> },
-    { name: "Spring Boot", icon: <SiSpringboot size={24} /> },
-    { name: "Node.js", icon: <FaNodeJs size={24} /> },
-    { name: "Microservices", icon: <FaGears size={24} /> },
-    { name: "Distributed Systems", icon: <GiFiles size={24} /> },
-    { name: "Kafka", icon: <SiApachekafka size={24} /> },
-    { name: "AWS", icon: <FaAws size={24} /> },
-    { name: "Docker", icon: <FaDocker size={24} /> },
-    { name: "Kubernetes", icon: <SiKubernetes size={24} /> },
-    { name: "CI/CD", icon: <FaJenkins size={24} /> }
-  ];
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray to-blue-950 text-white px-6 sm:px-12 lg:px-24 py-12 relative overflow-hidden">
@@ -104,26 +86,10 @@ export default function Home() {
 
         </motion.div>
       </section>
-      
-      <section id="skills" className="mt-16 relative bg-gray-800 bg-opacity-75 transparent p-8 rounded-lg shadow-lg overflow-hidden z-10">
-        <h3 className="text-2xl font-semibold border-b pb-2 text-blue-400">Skills</h3>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4 text-center"
-        >
-          {skills.map((skill, index) => (
-            <motion.div 
-              key={index} 
-              whileHover={{ scale: 1.1, rotate: 3 }} 
-              className="bg-gray-700 bg-opacity-50 p-4 rounded-lg shadow-md transition-transform duration-300 flex items-center justify-center space-x-2"
-            >
-              {skill.icon} <span>{skill.name}</span>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
+
+
+      <SkillsSection/>
+
 
       <section id="projects" className="mt-16 relative bg-gray-800 p-8 rounded-lg shadow-lg overflow-hidden">
         <h3 className="text-2xl font-semibold border-b pb-2 text-blue-400">Projects</h3>
@@ -141,26 +107,8 @@ export default function Home() {
         </div>
       </section>
 
-      
-      <section id="contact" className="mt-16 pb-16 relative bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg text-center z-10">
-        <h3 className="text-2xl font-semibold border-b pb-2 text-blue-400">Contact</h3>
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mt-6 space-y-4"
-        >
-          <p className="text-gray-400 flex justify-center items-center space-x-2">
-            <FaEnvelope size={20} /> <a href="mailto:parthikdas@gmail.com" className="text-blue-400 hover:underline">parthikdas@gmail.com</a>
-          </p>
-          <p className="text-gray-400 flex justify-center items-center space-x-2">
-            <FaLinkedin size={20} /> <Link href="https://linkedin.com/in/parthik-kumar-das-833b221ab" className="text-blue-400 hover:underline">linkedin.com/in/parthik-kumar-das</Link>
-          </p>
-          <p className="text-gray-400 flex justify-center items-center space-x-2">
-            <FaGithub size={20} /> <Link href="https://github.com/parthikdas" className="text-blue-400 hover:underline">github.com/parthikdas</Link>
-          </p>
-        </motion.div>
-      </section>
+      <Contacts/>
+
     </div>
   );
 }
