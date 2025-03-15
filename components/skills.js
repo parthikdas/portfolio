@@ -1,4 +1,4 @@
-"use client" // if ur component relies on states or effect or like any client related things like window u use this to tell that render this on client side
+// "use client" // if ur component relies on states or effect or like any client related things like window u use this to tell that render this on client side
 
 import { motion } from "framer-motion";
 import { FaJava, FaNodeJs, FaAws, FaDocker, FaJenkins, FaReact, FaDatabase, FaPython } from "react-icons/fa";
@@ -82,7 +82,7 @@ export default function SkillsSection() {
             </motion.div>
 
             {/* Skill Name */}
-            <span className="text-l font-semibold mt-1">{skill.name}</span>
+            <span className="text-xs md:text-lg font-semibold mt-1">{skill.name}</span>
           </motion.div>
         ))}
       </div>
