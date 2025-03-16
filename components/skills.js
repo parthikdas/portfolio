@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaJava, FaNodeJs, FaAws, FaDocker, FaJenkins, FaReact, FaDatabase, FaPython } from "react-icons/fa";
 import { FaGears } from "react-icons/fa6";
 import { GiFiles } from "react-icons/gi";
+import { GrSystem } from "react-icons/gr";
 import { SiSpringboot, SiApachekafka, SiKubernetes, SiJavascript, SiMysql } from "react-icons/si";
 
 const skills = [
@@ -21,7 +22,8 @@ const skills = [
     { name: "AWS", icon: <FaAws size={24} />, color: "#FF9900" },
     { name: "Docker", icon: <FaDocker size={24} />, color: "#0DB7ED" },
     { name: "Kubernetes", icon: <SiKubernetes size={24} />, color: "#326CE5" },
-    { name: "CI/CD", icon: <FaJenkins size={24} />, color: "#D24939" }
+    { name: "CI/CD", icon: <FaJenkins size={24} />, color: "#D24939" },
+    { name: "System Design", icon: <GrSystem size={24} />, color: "#6B9DAD" }
   ];
 
 // Path drawing animation (only triggers when in view)

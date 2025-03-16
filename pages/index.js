@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { AnimatePresence, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { MdKeyboardDoubleArrowUp, MdOutlineMenu } from "react-icons/md";
+import SxpSection from "@/components/exp";
 import SkillsSection from "@/components/skills";
 import Contacts from "@/components/contact";
 
@@ -105,12 +106,9 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 text-left"
         >
-          <h3 className="text-3xl font-semibold text-blue-400 mb-4">About Me</h3>
+          <h3 className="text-3xl font-semibold border-b pb-2 text-blue-400 mb-4">About Me</h3>
           <p className="text-md md:text-lg text-gray-400 text-justify">
             Hey there! 👋 I’m Parthik Kumar Das, a Software Engineer specializing in Distributed Systems, Cloud Computing, and Scalable Architectures. I design high-performance backend systems, optimize APIs, and build fault-tolerant, low-latency solutions. <br /><br />
-            🔹 Scaled authentication systems & CI/CD pipelines, improving performance by 30% and reducing query execution time by 50%.<br />
-            🔹 Expertise in Java, Spring Boot, Node.js, Microservices, Kafka, Kubernetes.<br />
-            🔹 Passionate about system design, performance optimization, and solving complex engineering challenges.
           </p>
         </motion.div>
         <motion.div 
@@ -124,6 +122,7 @@ export default function Home() {
         </motion.div>
       </section>
 
+      <SxpSection/>
 
       <SkillsSection/>
 
