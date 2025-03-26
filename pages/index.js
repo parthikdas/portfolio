@@ -18,7 +18,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray to-blue-950 text-white px-6 sm:px-12 lg:px-24 py-12 relative overflow-hidden">
+    <div className="min-h-screen bg-[#1A1A1A] text-white px-6 sm:px-12 lg:px-24 py-12 relative overflow-hidden">
       
       <motion.div 
         className="absolute inset-0 bg-gradient-to-r from-blue-900 to-black opacity-0"
@@ -99,7 +99,7 @@ export default function Home() {
       </header>
       <motion.path initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} />
 
-      <section id="about" className="mt-16 relative bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center">
+      <section id="about" className="mt-16 relative bg-[#282828] bg-opacity-75 p-8 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -117,7 +117,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 flex justify-center"
         >
-          <Image src="/try.png" alt="About Me Illustration" width={400} height={300} className="opacity-90 drop-shadow-lg filter hue-rotate-180 saturate-100 contrast-90 " />
+          <Image src="/try.png" alt="About Me Illustration" width={400} height={300} className="opacity-80 drop-shadow-lg " />
 
         </motion.div>
       </section>
@@ -127,7 +127,7 @@ export default function Home() {
       <SkillsSection/>
 
 
-      <section id="projects" className="mt-16 relative bg-gray-800 p-8 rounded-lg shadow-lg overflow-hidden">
+      <section id="projects" className="mt-16 relative bg-[#282828] p-8 rounded-lg shadow-lg overflow-hidden">
         <h3 className="text-2xl font-semibold border-b pb-2 text-blue-400">Projects</h3>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="bg-gray-700 p-4 rounded-lg shadow-md">

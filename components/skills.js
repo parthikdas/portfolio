@@ -41,7 +41,7 @@ const draw = {
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="mt-16 bg-gray-800 p-6 rounded-lg shadow-lg">
+    <section id="skills" className="mt-16 bg-[#282828] p-6 rounded-lg shadow-lg">
       <h3 className="text-3xl font-semibold text-blue-400 text-center mb-8">Skills</h3>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
@@ -88,6 +88,7 @@ export default function SkillsSection() {
           </motion.div>
         ))}
       </div>
+      {/* <div style={{color:#1d212a}}></div> */}
     </section>
   );
 }

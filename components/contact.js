@@ -1,10 +1,11 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Contacts() {
     return (
-        <section id="contact" className="mt-16 pb-16 relative bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg text-center z-10">
+        <section id="contact" className="mt-16 pb-16 relative bg-[#282828] bg-opacity-75 p-8 rounded-lg shadow-lg text-center z-10">
         <h3 className="text-s font-s pb-2 text-blue-200">Contact</h3>
         <h1 className="text-3xl font-bold border-b pb-2 text-blue-400">Get In Touch</h1>
         <motion.div 
@@ -24,6 +25,9 @@ export default function Contacts() {
           </p>
           <p className="text-gray-400 flex justify-center items-center space-x-2">
             <FaInstagram size={20} /> <Link href="https://www.instagram.com/kit_d_rock" target="_blank" className="text-blue-400 hover:underline">instagram.com/parthikdas</Link>
+          </p>
+          <p className="text-gray-400 flex justify-center items-center space-x-2">
+            <SiLeetcode size={20} /> <Link href="https://leetcode.com/u/parthik_das/" target="_blank" className="text-blue-400 hover:underline">leetcode.com/parthik_das</Link>
           </p>
         </motion.div>
       </section>

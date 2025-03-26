@@ -27,7 +27,7 @@ const experienceData = [
 
 export default function SxpSection() {
   return (
-    <section id="experience" className="mt-16 relative bg-gray-800 p-8 rounded-lg shadow-lg overflow-hidden">
+    <section id="experience" className="mt-16 relative bg-[#282828] p-8 rounded-lg shadow-lg overflow-hidden">
       <h3 className="text-2xl font-semibold border-b pb-2 text-blue-400">Experience</h3>
 
       <div className="relative mt-6">
