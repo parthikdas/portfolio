@@ -44,7 +44,7 @@ export default function Contact() {
             background="rgba(0,0,0,0)"
             style={{ width: "100%", height: "100%" }}
           ></spline-viewer>
-          <div className="absolute bottom-10 left-10 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-md text-sm animate-fadeOut pointer-events-none">
+          <div className="md:block hidden absolute bottom-10 left-10 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-md text-sm animate-fadeOut pointer-events-none">
             Try zoom or click rotate the cube 👆
           </div>
         </div>

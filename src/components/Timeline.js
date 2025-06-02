@@ -48,7 +48,7 @@ export default function Timeline() {
         {/* RIGHT – Previous Roles */}
         <div className="flex flex-col h-full">
           <h4 className="text-sm uppercase text-gray-400 mb-2">Previous Roles</h4>
-          <div className="space-y-6 overflow-y-auto pr-2 max-h-[400px] scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700">
+          <div className="space-y-6 overflow-y-auto pr-2 max-h-[300px] scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700">
             {previous.map((exp, index) => (
               <motion.div
                 key={index}
