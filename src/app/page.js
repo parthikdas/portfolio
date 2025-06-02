@@ -7,11 +7,10 @@ import Link from 'next/link';
 import React from 'react';
 import { useEffect, useState } from "react";
 import { CiLight, CiDark } from "react-icons/ci";
-import { GoHome } from "react-icons/go";
+import Experience from '@/components/Experience';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false); // For theme
-  const [visible, setVisible] = useState(true); // For theme change button and scroller up
 
   useEffect(() => {
     // Check current theme on mount
@@ -25,14 +24,15 @@ export default function Home() {
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
+
       {/* Nav Section */}
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-bg/10 backdrop-blur-sm shadow-lg rounded-full px-6 py-2 flex items-center text-bg text-lg font-medium justify-between max-w-3xl w-fit space-x-8">
         <div className="flex space-x-8">
           <Link href="#about" className="hover:text-blue-400 transition">
             About
           </Link>
-          <Link href="#projects" className="hover:text-blue-400 transition">
-            Projects
+          <Link href="#experience" className="hover:text-blue-400 transition">
+            Experience
           </Link>
           <Link href="#contact" className="hover:text-blue-400 transition">
             Contact
@@ -52,16 +52,14 @@ export default function Home() {
         <ParticlesBackground />
         <div className="relative z-10 flex items-center justify-center h-full pointer-events-none">
           <About/>
-          {visible && <div className="fixed bottom-10 right-10 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-md text-sm animate-fadeOut pointer-events-none">
+          <div className="absolute bottom-10 right-10 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-md text-sm animate-fadeOut pointer-events-none">
             Try hovering or clicking the background 👆
-          </div>}
+          </div>
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="snap-start min-h-screen flex items-center justify-center bg-bg-100">
-        <h2 className="text-4xl">Projects</h2>
-      </section>
+      {/* Experience and skills Section */}
+      <Experience/>
 
       {/* Contact Section */}
       <Contact/>

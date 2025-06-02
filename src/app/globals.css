@@ -7,20 +7,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 :root {
-  --bg-color: #fafafa;
+  --bg-color: linear-gradient(to bottom,#f5f7fa, #ced9ec);
   --component-color: #111;
 }
 
 .dark {
-  --bg-color: #111;
+  --bg-color: linear-gradient(to bottom, #111111, #222222cc);
   --component-color: #fafafa;
 }
 

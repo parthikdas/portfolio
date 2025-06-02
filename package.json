@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "framer-motion": "^12.15.0",
-    "motion": "^12.15.0",
     "next": "15.3.3",
     "particle.js": "^1.0.7",
     "react": "^19.0.0",

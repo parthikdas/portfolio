@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useEffect } from "react";
 import { FaEnvelope, FaPhoneAlt, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -45,6 +44,9 @@ export default function Contact() {
             background="rgba(0,0,0,0)"
             style={{ width: "100%", height: "100%" }}
           ></spline-viewer>
+          <div className="absolute bottom-10 left-10 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-md text-sm animate-fadeOut pointer-events-none">
+            Try zoom or click rotate the cube 👆
+          </div>
         </div>
 
         <div className="md:relative absolute md:w-1/2 w-full h-full flex flex-col justify-center items-center p-8 z-20 space-y-6 
